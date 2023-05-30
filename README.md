@@ -2,7 +2,7 @@
 
 ## Overview
 
-iPlanner is a local path planning package that uses front depth image and imperative learning.
+Welcome to the [**iPlanner: Imperative Path Planning**](https://arxiv.org/abs/2302.11434) code repository. The iPlanner is trained via an innovative Imperative Learning Approach and exclusively uses front-facing depth images for local path planning. 
 
 **Keywords:** Navigation, Local Planning, Imperative Learning
 
