@@ -1,0 +1,17 @@
+# images and odom topics
+main_freq:              2.5
+depth_topic:            /rgbd_camera/depth/image
+color_topic:            /rgbd_camera/color/image
+scan_topic:             /velodyne_points
+odom_topic:             /state_estimation
+
+# camaera info topics
+depth_info_topic:       /rgbd_camera/depth/camera_info
+color_info_topic:       /rgbd_camera/color/camera_info
+camera_frame_id:        rgbd_camera
+scan_frame_id:          sensor
+base_frame_id:          vehicle
+odom_associate_id:      vehicle
+
+# environment name
+env_name:               test_env

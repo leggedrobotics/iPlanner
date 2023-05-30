@@ -1,0 +1,13 @@
+Necessary Packages For iPlanner and Imperative Training
+
+1. conda create -n iplanner python=3.8
+
+2. conda activate iplanner
+
+3. pip install pypose==0.3.6 torchvision==0.14.1 opencv-python==4.7.0.72 open3d==0.13.0 empy==3.3.4 catkin-pkg==0.5.2 rospkg==1.5.0 wandb==0.15.3 numexpr==2.8.4 pluggy rosnumpy 
+
+-----------------------------------------------------------------------
+
+You can also use the following command to install all the packages at once using the iplanner_env.yaml file:
+
+1. conda env create -f iplanner_env.yaml

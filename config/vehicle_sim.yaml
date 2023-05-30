@@ -1,0 +1,29 @@
+# planning
+main_freq:              15
+image_flip:             False
+conv_dist:              0.25
+is_sim:                 True
+# newwork model
+model_save:             /models/plannernet.pt
+crop_size:              [360, 640]
+uint_type:              False
+# images and gaol waypoint topics
+depth_topic:            /rgbd_camera/depth/image
+goal_topic:             /way_point
+path_topic:             /path
+image_topic:            /iplanner_image
+camera_tilt:            0.0
+depth_max:              10.0
+# frame ids
+robot_id:               vehicle
+world_id:               map
+# fear reaction
+is_fear_act:            True
+buffer_size:            3
+angular_thred:          0.5
+track_dist:             0.5
+# sensor offset
+sensor_offset_x:        0.0
+sensor_offset_y:        0.0
+# smart joystick
+joyGoal_scale:          5.0

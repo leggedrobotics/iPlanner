@@ -1,0 +1,39 @@
+{
+    "dataConfig": {
+        "data-root": "data",
+        "env-id": "training_list.txt",
+        "env_type": "TrainingData",
+        "crop-size": [360, 640],
+        "max-camera-depth": 10.0
+    },
+    "modelConfig": {
+        "model-save": "models/plannernet.pt",
+        "resume": false,
+        "in-channel": 16,
+        "knodes": 5,
+        "goal-step": 5,
+        "max-episode-length": 25
+    },
+    "trainingConfig": {
+        "training": true,
+        "lr": 0.0001,
+        "factor": 0.1,
+        "min-lr": 0.000001,
+        "patience": 4,
+        "epochs": 50,
+        "batch-size": 128,
+        "w-decay": 0.001,
+        "num-workers": 2,
+        "gpu-id": 0
+    },
+    "logConfig": {
+        "log-save": "models/log-",
+        "test-env-id": 0,
+        "visual-number": 10
+    },
+    "sensorConfig": {
+        "camera-tilt": 0.2,
+        "sensor-offsetX-ANYmal": 0.4,
+        "fear-ahead-dist": 2.5
+    }
+}
