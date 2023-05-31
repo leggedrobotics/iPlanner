@@ -34,6 +34,6 @@
     "sensorConfig": {
         "camera-tilt": 0.2,
         "sensor-offsetX-ANYmal": 0.4,
-        "fear-ahead-dist": 2.5
+        "fear-ahead-dist": 2.0
     }
 }

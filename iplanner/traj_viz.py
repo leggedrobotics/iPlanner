@@ -180,7 +180,7 @@ class TrajViz:
         goal_ws[:, 2]     -= visual_offset
 
         # Set material shader
-        mtl = o3d.visualization.rendering.Material()
+        mtl = o3d.visualization.rendering.MaterialRecord()
         mtl.base_color = [1.0, 1.0, 1.0, 0.3]
         mtl.shader = "defaultUnlit"
 
@@ -200,6 +200,12 @@ class TrajViz:
         render = rendering.OffscreenRenderer(self.camera.width, self.camera.height)
         render.scene.set_background([0.0, 0.0, 0.0, 1.0])  # RGBA
         render.scene.scene.enable_sun_light(False)
+
+        # compute veretx normals
+        small_sphere.compute_vertex_normals()
+        mesh_sphere.compute_vertex_normals()
+        mesh_sphere_fear.compute_vertex_normals()
+        mesh_box.compute_vertex_normals()
         
         wp_start_idx = 1
         cv_img_list = []

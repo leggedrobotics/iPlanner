@@ -25,9 +25,7 @@ The iPlanner package has been tested under ROS Noetic on Ubuntu 20.04. This is r
 
 To run iPlanner, you need to install [PyTorch](https://pytorch.org/). We recommend using [Anaconda](https://docs.anaconda.com/anaconda/install/index.html) for installation. Check the official website for installation instructions for Anaconda and PyTorch accordingly.
 
-Then, please follow the instructions to install the necessary packages listed in the 
-
-    requirements.txt
+Please follow the instructions provided in the **INSTALL.md** file to set up your environment and install the necessary packages. You can find the **INSTALL.md** file in the root directory of the project.
 
 #### Simulation Environment Setup
 
