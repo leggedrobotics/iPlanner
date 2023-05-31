@@ -24,7 +24,7 @@ IMAGE_HEIGHT = 360
 MESH_SIZE = 0.5
 
 class TrajViz:    
-    def __init__(self, root_path: str, map_name: Optional[str], cameraTilt: float = 0.0, robot_name: str = "depth"):
+    def __init__(self, root_path: str, map_name: str = "tsdf1", cameraTilt: float = 0.0, robot_name: str = "robot"):
         """
         Initialize TrajViz class.
         """
@@ -33,7 +33,9 @@ class TrajViz:
             self.tsdf_map = TSDF_Map()
             self.tsdf_map.ReadTSDFMap(root_path, map_name)
             self.is_map = True
-        intrinsic_path = os.path.join(*[root_path, robot_name + "_intrinsic.txt"])
+            intrinsic_path = os.path.join(root_path, "depth_intrinsic.txt")
+        else:
+            intrinsic_path = os.path.join(root_path, robot_name + "_intrinsic.txt")
         self.SetCamera(intrinsic_path)
         self.camera_tilt = cameraTilt
 

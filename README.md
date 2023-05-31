@@ -25,7 +25,7 @@ The iPlanner package has been tested under ROS Noetic on Ubuntu 20.04. This is r
 
 To run iPlanner, you need to install [PyTorch](https://pytorch.org/). We recommend using [Anaconda](https://docs.anaconda.com/anaconda/install/index.html) for installation. Check the official website for installation instructions for Anaconda and PyTorch accordingly.
 
-Please follow the instructions provided in the **INSTALL.md** file to set up your environment and install the necessary packages. You can find the **INSTALL.md** file in the root directory of the project.
+Please follow the instructions provided in the `INSTALL.md` file to set up your environment and install the necessary packages. You can find the `INSTALL.md` file in the root directory of the project.
 
 #### Simulation Environment Setup
 
@@ -48,13 +48,13 @@ Go to the **iplanner** folder
     cd <your_imperative_planenr_path>/iplanner
 
 #### Pre-trained Network and Training Data
-Download the pre-trained network weights **plannernet.pt** [here](https://drive.google.com/file/d/1UD11sSlOZlZhzij2gG_OmxbBN4WxVsO_/view?usp=share_link) and put it into the **models** folder. Noted this pre-trained network has not been adapted to real-world data.
+Download the pre-trained network weights `plannernet.pt` [here](https://drive.google.com/file/d/1UD11sSlOZlZhzij2gG_OmxbBN4WxVsO_/view?usp=share_link) and put it into the **models** folder. Noted this pre-trained network has not been adapted to real-world data.
 
 You can also collect data yourself either inside the simulation environment or in the real-world. Launch the **data_collect_node**
 
     roslaunch iplanner_node data_collector.launch
 
-Provide the information for the necessary topics listed in **config/data_params.yaml**. The collected data will be put into the folder **data/CollectedData**, and generate folders for different environments that you can specify in **config/data_params.yaml** under **env_name**.
+Provide the information for the necessary topics listed in `config/data_params.yaml`. The collected data will be put into the folder **data/CollectedData**, and generate folders for different environments that you can specify in `config/data_params.yaml` under **env_name**.
 
 For each of the environments, the data contains the structure of:
 
@@ -88,11 +88,11 @@ Navigate to the iplanner folder within your project using the following command:
 
     cd <<YORU WORKSPACE>>/src/iPlanner/iplanner
 
-Run the Python script to generate the training data. The environments for which data should be generated are specified in the file **collect_list.txt**. You can modify the data generation parameters in the **config/data_generation.json** file.
+Run the Python script to generate the training data. The environments for which data should be generated are specified in the file `collect_list.txt`. You can modify the data generation parameters in the `config/data_generation.json` file.
 
     python data_generation.py
 
-Once you have the training data ready, use the following command to start the training process. You can specify different training parameters in the **config/training_config.json** file.
+Once you have the training data ready, use the following command to start the training process. You can specify different training parameters in the `config/training_config.json` file.
 
     python training_run.py
 

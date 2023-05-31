@@ -40,7 +40,7 @@ class iPlannerNode:
         self.traj_viz = traj_viz.TrajViz(os.path.join(*[planner_path, 'camera_intrinsic']), 
                                          map_name=None,
                                          cameraTilt=args.camera_tilt,
-                                         robot_name="depth")
+                                         robot_name="robot")
         self.tf_listener = tf.TransformListener()
         
         rospy.sleep(2.5) # wait for tf listener to be ready

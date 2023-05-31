@@ -35,7 +35,10 @@ class PlannerNetTrainer:
         self.parse_args()
         self.prepare_model()
         self.prepare_data()
-        self.init_wandb()
+        if self.args.training == True:
+            self.init_wandb()
+        else:
+            print("Testing Mode")
         
     def init_wandb(self):
         # Convert to string in the format you prefer
@@ -63,7 +66,7 @@ class PlannerNetTrainer:
 
     def prepare_model(self):
         self.net = PlannerNet(self.args.in_channel, self.args.knodes)
-        if self.args.resume == True:
+        if self.args.resume == True or not self.args.training:
             self.net, self.best_loss = torch.load(self.args.model_save, map_location=torch.device("cpu"))
             print("Resume training from best loss: {}".format(self.best_loss))
         else:
@@ -321,7 +324,8 @@ class PlannerNetTrainer:
  
 def main():
     trainer = PlannerNetTrainer()
-    trainer.train()
+    if trainer.args.training == True:
+        trainer.train()
     trainer.evaluate(is_visualize=True)
 
 if __name__ == "__main__":
