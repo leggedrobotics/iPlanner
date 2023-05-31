@@ -26,9 +26,9 @@ If you're opting for a manual installation, follow these steps:
     conda install -c anaconda numpy==1.23.5 nbconvert
     ```
 
-5. Install rospkg and wandb from the conda-forge channel using the command:
+5. Install rospkg, wandb, and PyYAML from the conda-forge channel using the command:
     ```bash
-    conda install -c conda-forge rospkg wandb
+    conda install -c conda-forge rospkg wandb pyyaml==6.0
     ```
 
 6. Install additional necessary packages using pip3:

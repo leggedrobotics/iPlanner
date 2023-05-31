@@ -31,7 +31,7 @@ dependencies:
   - defusedxml=0.7.1=pyhd3eb1b0_0
   - distro=1.8.0=pyhd8ed1ab_0
   - docker-pycreds=0.4.0=py_0
-  - docutils=0.16=py38_0
+  - docutils=0.20.1=py38h578d9bd_0
   - entrypoints=0.4=py38h06a4308_0
   - ffmpeg=4.3=hf484d3e_0
   - filelock=3.9.0=py38h06a4308_0
@@ -120,16 +120,17 @@ dependencies:
   - python=3.8.16=h7a1cb2a_3
   - python-dateutil=2.8.2=pyhd3eb1b0_0
   - python-fastjsonschema=2.16.2=py38h06a4308_0
+  - python_abi=3.8=2_cp38
   - pytorch=2.0.1=py3.8_cuda11.8_cudnn8.7.0_0
   - pytorch-cuda=11.8=h7e8668a_5
   - pytorch-mutex=1.0=cuda
-  - pyyaml=5.1.2=py38h516909a_1
+  - pyyaml=6.0=py38h0a891b7_4
   - pyzmq=23.2.0=py38h6a678d5_0
   - readline=8.2=h5eee18b_0
   - requests=2.29.0=py38h06a4308_0
   - rospkg=1.5.0=pyhd8ed1ab_0
   - sentry-sdk=1.21.1=pyhd8ed1ab_0
-  - setproctitle=1.1.10=py38h516909a_1001
+  - setproctitle=1.2.2=py38h0a891b7_2
   - setuptools=67.8.0=py38h06a4308_0
   - six=1.16.0=pyhd3eb1b0_1
   - smmap=3.0.5=pyh44b312d_0
