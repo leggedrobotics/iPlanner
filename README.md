@@ -54,7 +54,7 @@ You can also collect data yourself either inside the simulation environment or i
 
     roslaunch iplanner_node data_collector.launch
 
-Provide the information for the necessary topics listed in `config/data_params.yaml`. The collected data will be put into the folder **data/CollectedData**, and generate folders for different environments that you can specify in `config/data_params.yaml` under **env_name**.
+Provide the information for the necessary topics listed in `config/data_params.yaml`. The collected data will be put into the folder `data/CollectedData`, and generate folders for different environments that you can specify in `config/data_params.yaml` under **env_name**.
 
 For each of the environments, the data contains the structure of:
 
