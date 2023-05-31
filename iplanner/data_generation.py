@@ -35,6 +35,7 @@ if __name__ == '__main__':
     outfolder_name = parameters.get('outfolder_name', "TrainingData")
     output_folder = os.path.join(*[os.getcwd(), "data", outfolder_name])
 
+    image_type = parameters.get('image_type', "depth")
     voxel_size = parameters.get('voxel_size', 0.05)
     robot_size = parameters.get('robot_size', 0.3)  # the inflated robot radius
     map_name = parameters.get('map_name', "tsdf1")
@@ -53,7 +54,7 @@ if __name__ == '__main__':
         
         depth_constructor = DepthReconstruction(root_path, out_path, 0, 100, voxel_size*0.9, max_depth_range, is_max_iter)
         depth_constructor.depth_map_reconstruction(is_flat_ground=is_flat_ground)
-        depth_constructor.save_reconstructed_data()
+        depth_constructor.save_reconstructed_data(image_type=image_type)
         avg_height = depth_constructor.avg_height
         print("Average Height: ", avg_height)
         if is_visualize:

@@ -96,14 +96,15 @@ class DataUtils:
         return o3d.io.read_point_cloud(path)
 
     @staticmethod
-    def prepare_output_folders(out_path):
+    def prepare_output_folders(out_path, image_type):
+        depth_im_path = os.path.join(out_path, image_type)
         if not os.path.exists(out_path):
             os.makedirs(out_path)
+            os.makedirs(depth_im_path)
             os.makedirs(os.path.join(out_path, "maps", "cloud"))
             os.makedirs(os.path.join(out_path, "maps", "data"))
             os.makedirs(os.path.join(out_path, "maps", "params"))
-        depth_im_path = os.path.join(out_path, "depth")
-        if os.path.exists(depth_im_path):  # remove existing files
+        elif os.path.exists(depth_im_path):  # remove existing files
             for efile in os.listdir(depth_im_path):
                 os.remove(os.path.join(depth_im_path, efile))
         return None
@@ -359,14 +360,14 @@ class DepthReconstruction:
             print("no reconstructed cloud")
         o3d.visualization.draw_geometries([self.pcd])  # visualize point cloud
         
-    def save_reconstructed_data(self):
+    def save_reconstructed_data(self, image_type="depth"):
         if not self.is_constructed:
             print("save points failed, no reconstructed cloud!")
             
         print("save output files to: " + self.out_path)
-        DataUtils.prepare_output_folders(self.out_path)
+        DataUtils.prepare_output_folders(self.out_path, image_type)
         
-        DataUtils.save_images(self.out_path, self.im_arr_list, image_type="depth")
+        DataUtils.save_images(self.out_path, self.im_arr_list, image_type)
         DataUtils.save_odom_list(self.out_path, self.odom_list, self.start_id, len(self.im_arr_list))
         DataUtils.save_extrinsic(self.out_path, self.cameraR, self.cameraT)
         DataUtils.save_intrinsic(self.out_path, self.K)
