@@ -2,7 +2,7 @@
     "folder_name": "CollectedData",
     "outfolder_name": "TrainingData",
     "voxel_size": 0.05,
-    "robot_size": 0.4,
+    "robot_size": 0.3,
     "image_type": "depth",
     "map_name": "tsdf1",
     "is_max_iter": true,
