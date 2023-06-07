@@ -29,7 +29,7 @@ Please follow the instructions provided in the `INSTALL.md` file to set up your 
 
 #### Simulation Environment Setup
 
-Please refer to the Autonomous Exploration Development Environment repository for setting up the Gazebo simulation Environment: [Website](https://www.cmu-exploration.com/), switch to the branch **rgbd_camera**.
+Please refer to the Autonomous Exploration Development Environment repository for setting up the Gazebo simulation Environment: [Website](https://www.cmu-exploration.com/), switch to the branch **noetic_rgbd_camera**.
 
 #### Building
 
