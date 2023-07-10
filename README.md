@@ -4,6 +4,8 @@
 
 Welcome to the [**iPlanner: Imperative Path Planning**](https://arxiv.org/abs/2302.11434) code repository. The iPlanner is trained via an innovative Imperative Learning Approach and exclusively uses front-facing depth images for local path planning. 
 
+A video showing the functionalities of iPlanner is available here: [**Video**](https://youtu.be/QLxnNexEqnU)
+
 **Keywords:** Navigation, Local Planning, Imperative Learning
 
 ### License
