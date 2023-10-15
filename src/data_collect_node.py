@@ -215,7 +215,7 @@ class DataCollector:
         return
 
     def __writeExtrinstic(self, pos, ori, path, name):
-        extric_list = [pos[0], pos[1], pos[2], ori[0], ori[1], ori[2], ori[3]]
+        extric_list = [ori[0], ori[1], ori[2], ori[3], pos[0], pos[1], pos[2]]
         open(path, 'w').close()  # clear txt file
         fc = open(path, 'w')
         fc.writelines(str(extric_list))

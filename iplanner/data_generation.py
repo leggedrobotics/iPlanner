@@ -20,7 +20,7 @@ if __name__ == '__main__':
         parameters = json.load(json_file)
     
     folder_name = parameters.get('folder_name', "CollectedData")
-    folder_path = os.path.join(*[os.getcwd(), "data"])
+    folder_path = os.path.join(*[root_folder, "data"])
     ids_path = os.path.join(folder_path, "collect_list.txt")
     
     if not folder_name == "":
@@ -33,7 +33,7 @@ if __name__ == '__main__':
     print("Env List: ", env_list)
 
     outfolder_name = parameters.get('outfolder_name', "TrainingData")
-    output_folder = os.path.join(*[os.getcwd(), "data", outfolder_name])
+    output_folder = os.path.join(*[root_folder, "data", outfolder_name])
 
     image_type = parameters.get('image_type', "depth")
     voxel_size = parameters.get('voxel_size', 0.05)
