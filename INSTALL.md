@@ -18,7 +18,7 @@ If you're opting for a manual installation, follow these steps:
 
 3. Install PyTorch and Torchvision using the command:
     ```bash
-    conda install pytorch torchvision pytorch-cuda=11.8 -c pytorch -c nvidia
+    conda install pytorch torchvision==0.15.2 pytorch-cuda=11.8 -c pytorch -c nvidia
     ```
 
 4. Install numpy version 1.23.5 using conda:
