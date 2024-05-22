@@ -33,7 +33,7 @@ If you're opting for a manual installation, follow these steps:
 
 6. Install additional necessary packages using pip3:
     ```bash
-    pip3 install pypose open3d opencv-python rosnumpy
+    pip3 install pypose open3d opencv-python rosnumpy empy
     ```
 
 ## Installation Using a YAML File
