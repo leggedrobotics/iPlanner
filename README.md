@@ -102,7 +102,7 @@ Once you have the training data ready, use the following command to start the tr
 
 Launch the simulation environment without the default local planner
 
-    roslaunch vehicle_simulator simulation_env.launch
+    roslaunch vehicle_simulator <simulation_env>.launch
 
 Run the iPlanner ROS node without visualization:
 
