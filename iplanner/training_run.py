@@ -21,7 +21,8 @@ import torch.nn.functional as F
 import torchvision.transforms as transforms
 
 from planner_net import PlannerNet
-from dataloader import PlannerData, MultiEpochsDataLoader
+from dataloader import PlannerData
+from torch.utils.data import DataLoader
 from torchutil import EarlyStopScheduler
 from traj_cost import TrajCost
 from traj_viz import TrajViz
@@ -123,7 +124,7 @@ class PlannerNetTrainer:
                                      max_depth=self.args.max_camera_depth)
             
             total_img_data += len(train_data)
-            train_loader = MultiEpochsDataLoader(train_data, batch_size=self.args.batch_size, shuffle=True, num_workers=2)
+            train_loader = DataLoader(train_data, batch_size=self.args.batch_size, shuffle=True, num_workers=2)
             self.train_loader_list.append(train_loader)
 
             val_data = PlannerData(root=data_path,
@@ -135,7 +136,7 @@ class PlannerNetTrainer:
                                    max_episode=self.args.max_episode,
                                    max_depth=self.args.max_camera_depth)
 
-            val_loader = MultiEpochsDataLoader(val_data, batch_size=self.args.batch_size, shuffle=True, num_workers=2)
+            val_loader = DataLoader(val_data, batch_size=self.args.batch_size, shuffle=True, num_workers=2)
             self.val_loader_list.append(val_loader)
 
             # Load Map and Trajectory Class
