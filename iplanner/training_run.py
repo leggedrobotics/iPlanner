@@ -44,6 +44,8 @@ class PlannerNetTrainer:
     def init_wandb(self):
         # Convert to string in the format you prefer
         date_time_str = datetime.now().strftime("%d-%m-%Y-%H-%M-%S")
+        # using Wandb Core
+        wandb.require("core")
         # Initialize wandb
         self.wandb_run = wandb.init(
             # set the wandb project where this run will be logged
