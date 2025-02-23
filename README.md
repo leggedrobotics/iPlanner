@@ -175,6 +175,19 @@ If you utilize this codebase in your research, we kindly request you to referenc
 
 - Yang, F., Wang, C., Cadena, C., & Hutter, M. (2023). iPlanner: Imperative Path Planning. Robotics: Science and Systems Conference (RSS). Daegu, Republic of Korea, July 2023.
 
+Bibtex:
+
+	@INPROCEEDINGS{Yang-RSS-23, 
+	    AUTHOR    = {Fan Yang AND Chen Wang AND Cesar Cadena AND Marco Hutter}, 
+	    TITLE     = {{iPlanner: Imperative Path Planning}}, 
+	    BOOKTITLE = {Proceedings of Robotics: Science and Systems}, 
+	    YEAR      = {2023}, 
+	    ADDRESS   = {Daegu, Republic of Korea}, 
+	    MONTH     = {July}, 
+	    DOI       = {10.15607/RSS.2023.XIX.064} 
+	}
+
+
 ## Author
 
 This codebase has been developed and maintained by [Fan Yang](https://github.com/MichaelFYang). Should you have any queries or require further assistance, you may reach out to him at fanyang1@ethz.ch
